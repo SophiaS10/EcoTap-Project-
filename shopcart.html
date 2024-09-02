@@ -1,0 +1,309 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet">
+  <link rel="icon" href="favico.ico" type="image/x-icon">
+  <title>Your Shopping Cart </title>
+  <style type="text/css">
+    body {
+      background-image: url('newback.jpg');
+      background-size: cover;
+      background-position: center;
+    }
+
+    .container {
+      margin-top: 20px;
+    }
+
+    .form-group {
+      margin-bottom: 20px;
+    }
+	.navbar-nav {
+        flex-direction: column;
+        align-items: center;
+      }
+
+  </style>
+  <script>
+    // JavaScript code to make the title scroll at half the speed
+    (function() {
+      var title = document.title;
+      var position = 0;
+      var delay = 200; // Delay between each scroll movement in milliseconds (doubled)
+	  
+	
+      function scrollTitle() {
+        document.title = title.substring(position) + " " + title.substring(0, position);
+        position++;
+        if (position > title.length) {
+          position = 0;
+        }
+        setTimeout(scrollTitle, delay);
+      }
+
+      scrollTitle();
+    })();
+  </script>
+</head>
+
+<body>
+  <body style="background-color:#fff">
+    <nav class="navbar navbar-expand-lg navbar-light #fff">
+      <div class="container-fluid">
+        <a class="navbar-brand" href="index.html">
+          <img src="logo.png" width="150" class="Logo">
+        </a>
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarNav">
+          <ul class="navbar-nav ms-auto">
+            <li class="nav-item">
+              <a class="nav-link" href="index.html">Home</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="About.html">About</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="Materials.html">Materials</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="Product.html">Products</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="Pricing.html">Pricing</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="Shopcart.html"> <b> Go to Cart </b> </a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="Contact.html"> Contact Us</a>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </nav>
+    <div class="container">
+      <h2>Shopping Cart</h2>
+      <form id="cartForm">
+        <table class="table">
+          <thead>
+            <tr>
+              <th>Items</th>
+              <th>Details</th>
+              <th>Quantity</th>
+              <th>Price</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr data-price="9.99">
+              <td><img src="eco tap product.png" alt="Eco Tap Product" width="120"></td>
+              <td>Eco tap 200 ml</td>
+              <td>
+                <div class="col-md-2">
+                  <input type="number" class="form-control product" id="product1" value="0" min="0">
+                </div>
+              </td>
+              <td>$9.99</td>
+            </tr>
+            <tr data-price="13.50">
+              <td><img src="eco tap product.png" alt="Eco Tap Product" width="120"></td>
+              <td>Eco tap 400 ml</td>
+              <td>
+                <div class="col-md-2">
+                  <input type="number" class="form-control product" id="product2" value="0" min="0">
+                </div>
+              </td>
+              <td>$13.50</td>
+            </tr>
+            <tr data-price="18.00">
+              <td><img src="eco tap product.png" alt="Eco Tap Product" width="120"></td>
+              <td>Eco tap 700 ml</td>
+              <td>
+                <div class="col-md-2">
+                  <input type="number" class="form-control product" id="product3" value="0" min="0">
+                </div>
+              </td>
+              <td>$18.00</td>
+            </tr>
+			<tr data-price="21.00">
+              <td><img src="offer.png" alt="Offer" width="120"></td>
+              <td>Single Dispenser 25% off</td>
+              <td>
+                <div class="col-md-2">
+                  <input type="number" class="form-control product" id="product4" value="0" min="0">
+                </div>
+              </td>
+              <td>$21.00</td>
+            </tr>
+            <tr data-price="23.99">
+              <td><img src="offer1.png" alt="Offer 1" width="120"></td>
+              <td>Offer: 200ml + toothpatse</td>
+              <td>
+                <div class="col-md-2">
+                  <input type="number" class="form-control product" id="product5" value="0" min="0">
+                </div>
+              </td>
+              <td>$23.99</td>
+            </tr>
+            <tr data-price="25.99">
+              <td><img src="offer2.png" alt="Offer 2" width="120"></td>
+              <td>Offer: 700ml + 500ml detergent</td>
+              <td>
+                <div class="col-md-2">
+                  <input type="number" class="form-control product" id="product6" value="0" min="0">
+                </div>
+              </td>
+              <td>$25.99</td>
+            </tr>
+            
+          </tbody>
+        </table>
+		<div class="card shadow-2-strong mb-5 mb-lg-0" style="border-radius: 16px;">
+          <div class="card-body p-4">
+
+            <div class="row">			
+              <div class="col-md-6 col-lg-4 col-xl-3 mb-4 mb-md-0">
+                <form>
+                  <div class="d-flex flex-row pb-3">
+                    <div class="d-flex align-items-center pe-2">
+                      <input class="form-check-input" type="radio" name="radioNoLabel" id="radioNoLabel1v"
+                        value="" aria-label="..." checked />
+                    </div>
+                    <div class="rounded border w-100 p-3">
+                      <p class="d-flex align-items-center mb-0">
+                        <i class="fab fa-cc-mastercard fa-2x text-dark pe-2"></i>Credit
+                        Card
+                      </p>
+                    </div>
+                  </div>
+                  <div class="d-flex flex-row pb-3">
+                    <div class="d-flex align-items-center pe-2">
+                      <input class="form-check-input" type="radio" name="radioNoLabel" id="radioNoLabel2v"
+                        value="" aria-label="..." />
+                    </div>
+                    <div class="rounded border w-100 p-3">
+                      <p class="d-flex align-items-center mb-0">
+                        <i class="fab fa-cc-visa fa-2x fa-lg text-dark pe-2"></i>Debit Card
+                      </p>
+                    </div>
+                  </div>
+                  <div class="d-flex flex-row">
+                    <div class="d-flex align-items-center pe-2">
+                      <input class="form-check-input" type="radio" name="radioNoLabel" id="radioNoLabel3v"
+                        value="" aria-label="..." />
+                    </div>
+                    <div class="rounded border w-100 p-3">
+                      <p class="d-flex align-items-center mb-0">
+                        <i class="fab fa-cc-paypal fa-2x fa-lg text-dark pe-2"></i>PayPal
+                      </p>
+                    </div>
+                  </div>
+                </form>
+              </div>
+              <div class="col-md-6 col-lg-4 col-xl-6">
+                <div class="row">
+                  <div class="col-12 col-xl-6">
+                    <div class="form-outline mb-4 mb-xl-5">
+                      <input type="text" id="typeName" class="form-control form-control-lg" siez="17"
+                        placeholder="John Smith" />
+                      <label class="form-label" for="typeName">Name on card</label>
+                    </div>
+
+                    <div class="form-outline mb-4 mb-xl-5">
+                      <input type="text" id="typeExp" class="form-control form-control-lg" placeholder="MM/YY"
+                        size="7" id="exp" minlength="7" maxlength="7" />
+                      <label class="form-label" for="typeExp">Expiration</label>
+                    </div>
+                  </div>
+                  <div class="col-12 col-xl-6">
+                    <div class="form-outline mb-4 mb-xl-5">
+                      <input type="text" id="typeText" class="form-control form-control-lg" siez="17"
+                        placeholder="1111 2222 3333 4444" minlength="19" maxlength="19" />
+                      <label class="form-label" for="typeText">Card Number</label>
+                    </div>
+
+                    <div class="form-outline mb-4 mb-xl-5">
+                      <input type="password" id="typeText" class="form-control form-control-lg"
+                        placeholder="&#9679;&#9679;&#9679;" size="1" minlength="3" maxlength="3" />
+                      <label class="form-label" for="typeText">Cvv</label>
+                    </div>
+                  </div>
+                </div>
+              </div>
+		 </div>
+	</div>
+	</div>
+
+        <div class="text-center">
+          <h4>Order Summary</h4>
+          <div class="row">
+            <div class="col-md-4 offset-md-4">
+              <div class="form-group">
+                <label for="subtotal">Subtotal:</label>
+                <input type="text" class="form-control" id="subtotal" readonly>
+              </div>
+            </div>
+          </div>
+          <div class="row">
+            <div class="col-md-4 offset-md-4">
+              <div class="form-group">
+                <label for="shipping">Standard Shipping:</label>
+                <input type="text" class="form-control" id="shipping" value="$2.99" readonly>
+              </div>
+            </div>
+          </div>
+          <div class="row">
+            <div class="col-md-4 offset-md-4">
+              <div class="form-group">
+                <label for="total">Total:</label>
+                <input type="text" class="form-control" id="total" readonly>
+              </div>
+            </div>
+          </div>
+          <div id="shippingMessage"></div>
+          <button type="submit" class="btn btn-primary">Place Order</button>
+        </div>
+      </form>
+    </div>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"></script>
+    <script>
+      const productInputs = document.querySelectorAll('.product');
+      const subtotalInput = document.getElementById('subtotal');
+      const shippingInput = document.getElementById('shipping');
+      const totalInput = document.getElementById('total');
+      const shippingMessage = document.getElementById('shippingMessage');
+
+      productInputs.forEach(function(input) {
+        input.addEventListener('change', function() {
+          calculateTotal();
+        });
+      });
+
+      function calculateTotal() {
+        let subtotal = 0;
+        productInputs.forEach(function(input) {
+          const price = parseFloat(input.parentNode.parentNode.parentNode.dataset.price) || 0;
+          subtotal += parseFloat(input.value) * price;
+        });
+
+        const shipping = subtotal >= 50 ? 0 : parseFloat(shippingInput.value) || 2.99;
+        const total = subtotal + shipping;
+        subtotalInput.value = "$" + subtotal.toFixed(2);
+        shippingInput.value = subtotal >= 50 ? "Free" : "$" + shipping.toFixed(2);
+        totalInput.value = "$" + total.toFixed(2);
+
+        if (subtotal >= 50) {
+          shippingMessage.innerHTML = '<div class="col-md-4 offset-md-4"><div class="form-group"><p class="text-center text-muted">Free shipping on orders above $50.00.</p></div></div>';
+        } else {
+          shippingMessage.innerHTML = '';
+        }
+      }
+    </script>
+  </body>
+
+  </html>
